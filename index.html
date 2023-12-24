@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+   <div class="main-container" id="main-container">
+    <nav>
+        <div class="nav-container">
+            <div class="nav-left">
+                <img src="/static/assets/logo-small.svg" alt="nan">
+            </div>
+            <div class="nav-middle">
+                EmptyCup
+            </div>
+            <div class="nav-right">
+                <img src="/static/assets/three-dots-vertical1.svg" alt="nan">
+            </div>
+        </div>
+    </nav>
+    <hr>
+    <header>
+        <div class="header-container">
+            <div class="left-icons">
+                <div class="group-6">
+                        <img src="/static/assets/Group%206.svg" alt="" style="height: 6vh;">
+                </div>
+                <div class="group-7">
+                    <img src="/static/assets/Group%207.svg" alt="" style="height: 6vh;">
+                </div>
+                <div class="group-8">
+                    <img src="/static/assets/Group%208.svg" alt="" style="height: 6vh;">
+                </div>
+            </div>
+            <div class="right-icons">
+                <div class="group-10">
+                    <button  id="listbtn" style="border: none; background-color: transparent;" onclick="openup()"><img src="/static/assets/Group%2010.svg" alt=""></button>
+                </div>
+                <div class="group-9">
+                    <img src="/static/assets/Group%209.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="openup">
+        
+    </div>
+    <div id="body-lists" style="display: contents;">
+       
+    </div>
+   </div>
+</body>
+<script>
+
+    let button = document.getElementById("listbtn");
+    let divelement = document.querySelector(".openup");
+    let normallist = document.getElementById("body-lists");
+    function openup(){
+        if(normallist.style.display=="contents"){
+            divelement.style.display="block"
+            normallist.style.display="none";
+        }
+        else if(normallist.style.display=="none"){
+            normallist.style.display="contents";
+            divelement.style.display="none";
+        }
+    }
+</script>
+<script src="/static/index.js"></script>
+</html>
